@@ -13,7 +13,7 @@
     Menyediakan API untuk frontend (nanti)
 
    
-# alut : 
+# alur : 
 
 2️⃣ Aktor Sistem
 
