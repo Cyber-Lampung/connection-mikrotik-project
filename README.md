@@ -89,9 +89,86 @@ D. Management
 4️⃣ Kebutuhan Non‑Fungsional
 
     Aman (API key / token)
-
     Modular & scalable
-
     Tidak membebani MikroTik
-
     Bisa dipakai banyak router (multi‑device)
+
+
+[MikroTik Router]
+       |
+   (API / SSH)
+       |
+[Collector Service]
+       |
+[Analysis Engine]
+       |
+[Rule Engine]
+       |
+[Action Executor]
+       |
+[MikroTik Firewall]
+
+        |
+     [REST API]
+        |
+   (Frontend nanti)
+
+   
+6️⃣ Komponen Backend
+
+    Collector
+
+        Ambil data MikroTik (scheduler / polling)
+
+    Analysis Engine
+
+        Olah log & connection
+
+    Rule Engine
+
+        Evaluasi rule & threshold
+
+    Action Executor
+
+        Push rule ke MikroTik
+
+    API Layer
+
+        Endpoint untuk admin & frontend
+
+    Database
+
+        Log
+
+        Rule
+
+        Blocked IP
+
+        Device
+
+7️⃣ Flow Auto‑Block (Sederhana)
+
+    Backend ambil data koneksi
+
+    Analisis → IP melewati threshold
+
+    Rule Engine valid
+
+    Action Executor:
+
+        Tambah IP ke address-list
+
+    Log dicatat
+
+    Status tersedia via API
+
+8️⃣ Yang BELUM kita bahas (nanti)
+
+    UI / UX
+
+    Auth user detail
+
+    Dashboard visual
+
+    Notifikasi (Telegram/Email)
+
